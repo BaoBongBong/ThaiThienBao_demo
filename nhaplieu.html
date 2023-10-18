@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nhập liệu</title>
+<style>
+  /* Ẩn toàn bộ nội dung khi trang tải lên */
+  .content {
+    display: none;
+    color:white
+  }
+
+  /* Hiển thị nội dung khi nó được kích hoạt bằng class active */
+  .content.active {
+    display: block;
+    color:white;
+  }
+
+  body{
+    font-family: sans-serif;
+  }
+  .container{
+  width: 600px;
+  margin: 0 auto;
+  background-color: #5393A6;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  }
+  label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+  input[type=text], [type=date]
+  {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  button[type=button]{
+    width: 20%;
+    padding:12px;
+    color: #FFFFFF;
+    background-color: #F58220;
+    border-color: #F58220;
+    border-radius: 10px;
+    margin: 10px;
+    align-items: center;
+    font-size: 15px;
+  }
+  .tablecontainer
+  {
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F58220;
+    padding: 20px;
+    border-radius: 15px;
+    border: 10px white;
+  }
+  tr, td{
+    width: 50%;
+    height: 50px;
+  }
+</style>
+</head>
+<body>
+<div class="container" style="color: white;">
+  <h1>
+    THÔNG TIN ĐĂNG KÝ
+  </h1>
+  <form>
+    <label for="name">Tên:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="birthdate">Ngày tháng năm sinh:</label>
+    <input type="date" id="birthdate" name="birthdate" required><br><br>
+    
+    <button type="button" class="show-content">Cơ bản</button>
+    <button type="button" class="show-content">Nâng cao</button>
+    <button type="button" class="show-content">Ưu việt</button>
+    <button type="button" class="show-content">Toàn diện</button>
+    <button type="button" class="show-content">Hoàn thiện</button>
+  </form>
+  <div class="content" id="userInfoContent">
+    <p id="userInfo"></p>
+  </div>
+  <div class="content">
+    <h2>NỘI DUNG CHƯƠNG TRÌNH BẢO HIỂM: <br> NÂNG CAO <br></h2>
+    <table class="tablecontainer" style="width:100%">
+      <tr>
+        <td>Số tiền bảo hiểm tối đa/ năm</td>
+        <td>250.000.000 đồng</td>
+      </tr>
+      <tr>
+        <td>Phạm vi bảo hiểm</td>
+        <td>Châu Á</td>
+      </tr>
+      <tr>
+        <td>Quyền lợi</td>
+        <td>Điều trị nội trú <br>Điều trị ngoại trú</td>
+      </tr>
+    </table>
+
+    <h3>QUYỀN LỢI ĐIỀU TRỊ NỘI TRÚ:</h3>
+
+    <table class="tablecontainer" style="width:100%">
+      <tr>
+        <td>Số tiền bảo hiểm tối đa/ năm</td>
+        <td>Đơn vị</td>
+        <td>250.000.000</td>
+      </tr>
+      <tr>
+        <td>Phạm vi địa lý</td>
+        <td></td>
+        <td>Châu Á</td>
+      </tr>
+      <tr>
+        <td>Đồng chi trả</td>
+        <td></td>
+        <td>Lựa chọn 0% hoặc 15%</td>
+      </tr>
+      <tr>
+        <td>1. Tiền giường/ phòng <br>
+          (tối đa 45 ngày/ năm)</td>
+        <td>1 ngày</td>
+        <td>700.000</td>
+      </tr>
+      <tr>
+        <td>2. Tiền giường/ phòng <br> của khoa/ <br>
+          phòng chăm sóc <br> đặc biệt (ICU)</td>
+        <td>1 ngày</td>
+        <td>700.000</td>
+      </tr>
+    </table>
+    <!-- 
+    ĐIỀU TRỊ NỘI TRÚ BAO GỒM: <br>
+    2. Tiền giường/ phòng của khoa/ phòng chăm sóc đặc biệt (ICU) cho 1 ngày: 1.000.000 <br>
+    3. Điều trị trước khi nhập viện cho 1 năm: 10.000.000<br>
+    4. Điều trị sau khi nhập viện cho 1 năm: 10.000.000<br>
+    5. Điều trị nội trú khác cho 1 năm: 10.000.000<br>
+    6. Tiền giường cho người chăm sóc (tối đa 20 ngày/ năm) cho 1 ngày: 300.000<br>
+    7. Chăm sóc y tế tại nhà: (Tối đa 20 ngày/ năm) cho 1 ngày: 150.000
+    8. Chi phí phẫu thuật cho 1 đợt nằm viện: 12.000.000 <br>
+    9. Điều trị tổn thương răng do tai nạn cho 1 lần tai nạn: 1.000.000<br>
+    KHÔNG ÁP DỤNG ĐIỀU TRỊ NGOẠI TRÚ, CHĂM SÓC NHA KHOA VÀ THAI SẢN <br> -->
+
+  </div>
+  <div class="content">
+    <!-- Nội dung của gói bảo hiểm nâng cao<br>
+    - Số tiền bảo hiểm tối đa/ năm: 125.000.000 đồng <br>
+    - Phạm vi bảo hiểm: Việt Nam <br>
+    - Quyền lợi: Điều trị nội trú <br>
+    <br>
+    ĐIỀU TRỊ NỘI TRÚ BAO GỒM: <br>
+    1. Tiền giường/ phòng (tối đa 45 ngày/ năm) cho 1 ngày: 700.000 <br>
+    2. Tiền giường/ phòng của khoa/ phòng chăm sóc đặc biệt (ICU) cho 1 ngày: 1.000.000 <br>
+    3. Điều trị trước khi nhập viện cho 1 năm: 10.000.000<br>
+    4. Điều trị sau khi nhập viện cho 1 năm: 10.000.000<br>
+    5. Điều trị nội trú khác cho 1 năm: 10.000.000<br>
+    6. Tiền giường cho người chăm sóc (tối đa 20 ngày/ năm) cho 1 ngày: 300.000<br>
+    7. Chăm sóc y tế tại nhà: (Tối đa 20 ngày/ năm) cho 1 ngày: 150.000
+    8. Chi phí phẫu thuật cho 1 đợt nằm viện: 12.000.000 <br>
+    9. Điều trị tổn thương răng do tai nạn cho 1 lần tai nạn: 1.000.000<br>
+    KHÔNG ÁP DỤNG ĐIỀU TRỊ NGOẠI TRÚ, CHĂM SÓC NHA KHOA VÀ THAI SẢN -->
+  </div>
+    
+  <div class="content">
+    <!-- Nội dung của gói bảo hiểm ưu việt<br>
+    - Số tiền bảo hiểm tối đa/ năm: 125.000.000 đồng <br>
+    - Phạm vi bảo hiểm: Việt Nam <br>
+    - Quyền lợi: Điều trị nội trú <br>
+    <br>
+    ĐIỀU TRỊ NỘI TRÚ BAO GỒM: <br>
+    1. Tiền giường/ phòng (tối đa 45 ngày/ năm) cho 1 ngày: 700.000 <br>
+    2. Tiền giường/ phòng của khoa/ phòng chăm sóc đặc biệt (ICU) cho 1 ngày: 1.000.000 <br>
+    3. Điều trị trước khi nhập viện cho 1 năm: 10.000.000<br>
+    4. Điều trị sau khi nhập viện cho 1 năm: 10.000.000<br>
+    5. Điều trị nội trú khác cho 1 năm: 10.000.000<br>
+    6. Tiền giường cho người chăm sóc (tối đa 20 ngày/ năm) cho 1 ngày: 300.000<br>
+    7. Chăm sóc y tế tại nhà: (Tối đa 20 ngày/ năm) cho 1 ngày: 150.000
+    8. Chi phí phẫu thuật cho 1 đợt nằm viện: 12.000.000 <br>
+    9. Điều trị tổn thương răng do tai nạn cho 1 lần tai nạn: 1.000.000<br>
+    KHÔNG ÁP DỤNG ĐIỀU TRỊ NGOẠI TRÚ, CHĂM SÓC NHA KHOA VÀ THAI SẢN -->
+  </div>
+  <div class="content">
+    <!-- Nội dung của gói bảo hiểm toàn diện<br>
+    - Số tiền bảo hiểm tối đa/ năm: 125.000.000 đồng <br>
+    - Phạm vi bảo hiểm: Việt Nam <br>
+    - Quyền lợi: Điều trị nội trú <br>
+    <br>
+    ĐIỀU TRỊ NỘI TRÚ BAO GỒM: <br>
+    1. Tiền giường/ phòng (tối đa 45 ngày/ năm) cho 1 ngày: 700.000 <br>
+    2. Tiền giường/ phòng của khoa/ phòng chăm sóc đặc biệt (ICU) cho 1 ngày: 1.000.000 <br>
+    3. Điều trị trước khi nhập viện cho 1 năm: 10.000.000<br>
+    4. Điều trị sau khi nhập viện cho 1 năm: 10.000.000<br>
+    5. Điều trị nội trú khác cho 1 năm: 10.000.000<br>
+    6. Tiền giường cho người chăm sóc (tối đa 20 ngày/ năm) cho 1 ngày: 300.000<br>
+    7. Chăm sóc y tế tại nhà: (Tối đa 20 ngày/ năm) cho 1 ngày: 150.000
+    8. Chi phí phẫu thuật cho 1 đợt nằm viện: 12.000.000 <br>
+    9. Điều trị tổn thương răng do tai nạn cho 1 lần tai nạn: 1.000.000<br>
+    KHÔNG ÁP DỤNG ĐIỀU TRỊ NGOẠI TRÚ, CHĂM SÓC NHA KHOA VÀ THAI SẢN -->
+  </div>
+  <div class="content">
+    <!-- Nội dung của gói bảo hiểm hoàn thiện<br>
+    - Số tiền bảo hiểm tối đa/ năm: 125.000.000 đồng <br>
+    - Phạm vi bảo hiểm: Việt Nam <br>
+    - Quyền lợi: Điều trị nội trú <br>
+    <br>
+    ĐIỀU TRỊ NỘI TRÚ BAO GỒM: <br>
+    1. Tiền giường/ phòng (tối đa 45 ngày/ năm) cho 1 ngày: 700.000 <br>
+    2. Tiền giường/ phòng của khoa/ phòng chăm sóc đặc biệt (ICU) cho 1 ngày: 1.000.000 <br>
+    3. Điều trị trước khi nhập viện cho 1 năm: 10.000.000<br>
+    4. Điều trị sau khi nhập viện cho 1 năm: 10.000.000<br>
+    5. Điều trị nội trú khác cho 1 năm: 10.000.000<br>
+    6. Tiền giường cho người chăm sóc (tối đa 20 ngày/ năm) cho 1 ngày: 300.000<br>
+    7. Chăm sóc y tế tại nhà: (Tối đa 20 ngày/ năm) cho 1 ngày: 150.000
+    8. Chi phí phẫu thuật cho 1 đợt nằm viện: 12.000.000 <br>
+    9. Điều trị tổn thương răng do tai nạn cho 1 lần tai nạn: 1.000.000<br>
+    KHÔNG ÁP DỤNG ĐIỀU TRỊ NGOẠI TRÚ, CHĂM SÓC NHA KHOA VÀ THAI SẢN -->
+  </div>
+  
+  <script src="index.js"></script>
+</div>
+</body>
+</html>
